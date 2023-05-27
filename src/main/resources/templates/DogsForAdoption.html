@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dogs For Adoption</title>
+</head>
+<body>
+    <h1>Lista de Dogs</h1>
+    <hr>
+    <table>
+        <thead>
+        <tr>
+            <th> Nome</th>
+            <th> Raça</th>
+            <th> Idade</th>
+            <th> Porte</th>
+            <th> Humor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="dogs:${dogs}">
+            <td th:text="${dogs.nome}">Nome</td>
+            <td th:text="${dogs.type}">Raça</td>
+            <td th:text="${dogs.age}">Idade</td>
+            <td th:text="${dogs.size}">Tamanho</td>
+            <td th:text="${dogs.mood}">Humor</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
